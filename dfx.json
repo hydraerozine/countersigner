@@ -7,13 +7,16 @@
       "main": "src/diamond_backend/main.mo",
       "type": "motoko"
     },
+    "diamond_price_oracle": {
+      "declarations": {
+        "node_compatibility": true
+      },
+      "main": "src/diamond_price_oracle/main.mo",
+      "type": "motoko"
+    },
     "diamond_frontend": {
-      "dependencies": [
-        "diamond_backend"
-      ],
-      "source": [
-        "src/diamond_frontend/dist"
-      ],
+      "dependencies": ["diamond_backend"],
+      "source": ["src/diamond_frontend/dist"],
       "type": "assets",
       "workspace": "diamond_frontend"
     },
@@ -32,7 +35,7 @@
   "defaults": {
     "build": {
       "args": "",
-      "packtool": ""
+      "packtool": "npx ic-mops sources"
     }
   },
   "output_env_file": ".env",
