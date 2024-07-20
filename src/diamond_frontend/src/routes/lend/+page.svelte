@@ -3,8 +3,9 @@
   import { onMount } from 'svelte';
   import { backend } from "$lib/canisters";
   import { goto } from '$app/navigation';
+  import { getAssets } from '$lib/getAssets';
 
-  let assets = [];
+  let assets = getAssets();
   let selectedAsset = null;
   let investmentAmount = '';
   let totalAssets = 0;
@@ -24,6 +25,8 @@
 
   function selectAsset(asset) {
     selectedAsset = asset;
+
+    console.log("Selected asset:", asset);
   }
 
   async function invest() {
@@ -109,7 +112,7 @@
                 <td><div class="asset-color" style="background-color: {asset.color}; width: 20px; height: 20px; border-radius: 50%;"></div></td>
                 <td>{asset.assetId}</td>
                 <td>£{asset.totalInvested.toFixed(2)}</td>
-                <td>{asset.roi}%</td>
+                <td>{(asset.roi).toFixed(2)}%</td>
                 <td>{new Date(asset.endDate).toLocaleString()}</td>
                 <td>£{asset.reward.toFixed(2)}</td>
                 <td>{asset.daysRemaining}</td>

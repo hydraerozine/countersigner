@@ -16,7 +16,7 @@ module DiamondTypes {
     type GradingReport = {
         lab : Text;
         certificateNumber : Text;
-        certificateURL : [Null];
+        certificateURL : [Text];
     };
 
     type Price = {
