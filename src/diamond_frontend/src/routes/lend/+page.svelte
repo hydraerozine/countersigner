@@ -13,14 +13,14 @@
   let ecosystemValue = 0;
 
   onMount(async () => {
-    try {
-      assets = await backend.getAllAssets();
-      totalAssets = assets.length;
-      totalLiquidityValue = assets.reduce((sum, asset) => sum + asset.totalInvested, 0);
-      ecosystemValue = totalLiquidityValue * 0.01; // Example calculation
-    } catch (error) {
-      console.error("Error fetching assets:", error);
-    }
+    // try {
+    //   assets = await backend.getAllAssets();
+    //   totalAssets = assets.length;
+    //   totalLiquidityValue = assets.reduce((sum, asset) => sum + asset.totalInvested, 0);
+    //   ecosystemValue = totalLiquidityValue * 0.01; // Example calculation
+    // } catch (error) {
+    //   console.error("Error fetching assets:", error);
+    // }
   });
 
   function selectAsset(asset) {

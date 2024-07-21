@@ -1,0 +1,11 @@
+{
+  "diamond_backend": {
+    "ic": "3losu-yqaaa-aaaap-ahpbq-cai"
+  },
+  "diamond_frontend": {
+    "ic": "36jdz-zyaaa-aaaap-ahpca-cai"
+  },
+  "diamond_price_oracle": {
+    "ic": "3zifn-uaaaa-aaaap-ahpcq-cai"
+  }
+}
